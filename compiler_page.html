@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokenizer</title>
+    <link rel="shortcut icon" href="./images/favicon_M2s_icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div class="bg-[#590f0f] font-ggSans w-full">
+        <nav class="flex justify-between max-w-[75rem] items-center h-[4.5rem] mx-auto">
+            <div class="ml-[25%] scale-[270%] px-3">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="120.000000pt" height="40.000000pt"
+                    viewBox="0 0 1280.000000 720.000000" preserveAspectRatio="xMidYMid meet">
+                    <g transform="translate(0.000000,720.000000) scale(0.10030,-0.10000)" fill="#ffffff" stroke="none">
+                        <!-- Add your SVG paths here -->
+                    </g>
+                </svg>
+            </div>
+
+            <div class="mx-3 flex items-center">
+                <div class="text-white flex lg:gap-6 font-ggSans text-[1.25rem] font-medium lg:flex xl:flex">
+                    <a href="index.html" class="capitalize hover:underline">Home</a>
+                    <a href="documentation.html" class="capitalize hover:underline">Docs</a>
+                    <a href="#" class="capitalize hover:underline">Blog</a>
+                </div>
+
+                <div class="lg:hidden xl:hidden mx-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+                        <path fill="#FFFFFF" fill-rule="evenodd" clip-rule="evenodd"
+                            d="M33.3327 10H6.66602V15H33.3327V10ZM6.66602 18.3317H33.3327V23.3317H6.66602V18.3317ZM6.66602 26.665H33.3327V31.665H6.66602V26.665Z">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex px-7 justify-around mt-5">
+        <!-- Left Box -->
+        <div class="w-[45%] h-[700px] rounded-md">
+            <div class="h-[7%] flex flex-row-reverse rounded-md" style="border: 2px solid #590f0f;">
+
+                <button class="rounded-md px-4 py-1 text-lg my-auto mr-1 text-white" style="background-color: #590f0f;" id="lexify">Lexify</button>
+                <div class="my-auto text-lg mr-3 rounded-md">
+                    <label for="lang-names">Choose Language:</label>
+                    <select name="lang-names" id="lang-names" class="px-10" onchange="getSelectedValue();">
+                        <option value="Java">Java</option>
+                        <option value="C">C</option>
+                        <option value="C++">C++</option>
+                        <option value="Python">Python</option>
+                    </select>
+                </div>
+            </div>
+            <textarea id="code-input" placeholder="Paste your Code Here" cols="84" rows="10"
+                class="border-2 border-black px-6 pt-5 w-full h-[93%] rounded-md mt-3"></textarea>
+        </div>
+
+        <!-- Right Box -->
+        <div class="w-[45%] h-[700px] px-5 text-lg font-medium">
+            <div class="h-[7%] rounded-md flex justify-center text-3xl items-center border-2 border-[#3e0808] text-[#3e0808] p-4">
+                OUTPUT
+            </div>
+            <div id="right_div" class="w-full h-[650px] overflow-y-scroll rounded-md mt-3 px-5 py-5 border-2 border-[#3e0808]">
+            </div>
+            
+            
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#23272A] mt-20 px-3">
+        <div class="max-w-[1200px] mx-auto flex flex-col pt-20">
+            <div class="flex mt-4 justify-around gap-10 lg:flex-row">
+                <div class="flex my-2 items-center">
+                    <img src="./images/india (1).png" alt="India Flag" class="w-8 h-8">
+                    <p class="text-cyan-50 mx-2">INDIA</p>
+                </div>
+
+                <div class="flex justify-between lg:w-[250px] flex-wrap mx-2 my-5 lg:my-0">
+                    <div class="flex flex-col">
+                        <span class="capitalize mb-3" style="color: #590f0f;">Important Links</span>
+                        <span><a href="#" class="capitalize text-cyan-50 hover:underline">About Us</a></span>
+                        <span><a href="#" class="capitalize text-cyan-50 hover:underline">Read Documentation</a></span>
+                        <span><a href="#" class="capitalize text-cyan-50 hover:underline">Resources</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="my-8 h-[2px]" style="background-color: #590f0f;"></div>
+
+
+            <div class="flex justify-center mb-8">
+                <img src="./images/favicon_M2s_icon.ico" alt="Favicon" class="w-14 h-14 mx-4">
+                <p class="text-cyan-50">© 2024 Tokenizer. All Rights Reserved.</p>
+            </div>
+        </div>
+
+    </footer>
+    <script src="compiler_page.js"></script>
+
+</body>
+
+</html>
